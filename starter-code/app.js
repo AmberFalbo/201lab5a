@@ -53,9 +53,9 @@ Test this function by hand in the console to get it working, and when you think 
 // Write your code here
 function sumAndMultiply(a, b, c) { 
   var apples = sum(a, b); // apples = [11, string]
-  var oranges = sum(apples[0], c); // oranges = 11, 5
+  // var oranges = sum(apples[0], c); // oranges = 11, 5
   apples = sum(apples[0], c);
-  console.log('hear ' + apples);
+  // console.log('hear ' + apples);
   var mult = multiply(a, b);
   mult = multiply(mult[0], c);
   var addThree = a + ' and ' + b + ' and ' + c + ' sum to ' + apples[0] + '.';
@@ -110,7 +110,7 @@ function multiplyArray(multArr) { //eslint-disable-line
   var manyOranges = multiply(multArr[0], multArr[1],);
   var manyMoreOranges = multiply(manyOranges[0], multArr[2]);
   var orangeScript = 'The numbers ' + multArr[0] + ',' + multArr[1] + ',' + multArr[2] + ' have a product of ' + manyMoreOranges[0] + '.';
-  console.log(orangeScript);
+  // console.log(orangeScript);
   return [manyMoreOranges[0], orangeScript];
 }
 
