@@ -52,11 +52,15 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sumAndMultiply(a, b, c) { 
-  var add = a + b + c;
-  var mult = a * b * c;
-  var addThree = a + ' and ' + b + ' and ' + c + ' sum to ' + add + '.';
-  var multThree = 'The product of ' + a + ' and ' + b + ' and ' + c + ' is ' + mult + '.';
-  return [add, mult, addThree, multThree];
+  var apples = sum(a, b); // apples = [11, string]
+  var oranges = sum(apples[0], c); // oranges = 11, 5
+  apples = sum(apples[0], c);
+  console.log('hear ' + apples);
+  var mult = multiply(a, b);
+  mult = multiply(mult[0], c);
+  var addThree = a + ' and ' + b + ' and ' + c + ' sum to ' + apples[0] + '.';
+  var multThree = 'The product of ' + a + ' and ' + b + ' and ' + c + ' is ' + mult[0] + '.';
+  return [apples[0], mult[0], addThree, multThree];
 }
 
 // Here is the test for sumAndMultiply(); uncomment it to run it
@@ -75,15 +79,19 @@ IMPORTANT DETAIL: You may not use the arithmetic operator + in this function. To
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testSumArray() function and see if the test passes.*/
 
 // Write your code here
-// var testArray = [2, 3, 4]; //eslint-disable-line
+var testArray = [2, 3, 4]; //eslint-disable-line
 
 function sumArray(sumArr) { //eslint-disable-line
-
+  var manyApples = sum(sumArr[0], sumArr[1],);
+  var manyMoreApples = sum(manyApples[0], sumArr[2]);
+  var appleScript = sumArr[0] + ',' + sumArr[1] + ',' + sumArr[2] + ' was passed in as an array of numbers, and ' + manyMoreApples[0] + ' is their sum.';
+  console.log(appleScript);
+  return [manyMoreApples[0], appleScript];
 }
 
 // Here is the test for sumArray(); uncomment it to run it
 
-// testSumArray(testArray);
+testSumArray(testArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
